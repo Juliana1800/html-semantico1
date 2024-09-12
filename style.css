@@ -1,0 +1,125 @@
+:root {
+    --cor-primaria: #ffff00;
+    --cor-secundaria:#662549;
+    --cor-terciaria: #AE445A;
+    --cor-quaternaria:#d8d2f9;
+    --cor-fundo: #eeb6b6;
+    --margem-paragrafos: 20px;
+    --font-primaria: "Times New Roman", sans-serif;
+    --fonte-secundario: Arial, Helvetica, sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth; /* comportamento-da-rolagem: suave */
+}
+body {
+  margin: var(--margem-paragrafos);
+    text-align: justify;
+    background:var(--cor-fundo);
+    font-family: var(--font-primaria);
+
+}
+
+.titulo-de-pagina {
+    color: var(--cor-primaria);
+    line-height: 2;
+    font-weight: bold;
+    font-size: 20pt;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.titulo-de-secao {
+    color: var(--cor-secundaria);
+    line-height: 1.8;
+    font-size: 18pt;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+  
+article {
+    border: 10px dotted#0a0a0a;
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 20px 0 20px;
+    width: 25%;
+} 
+
+.titulo-do-artigo {
+color: var(--cor-primaria);
+ line-height: 2;
+ font-weight: bold;
+ font-size: 22pt;
+ font-family: Arial, Helvetica, sans-serif;
+}
+.subtitulo-de-artigo {
+    color: var(--cor-terciaria);
+    line-height: 2.0;
+    font-size: 20pt;
+    font-weight: bolder;
+    font-style: italic;
+    margin: 10px
+}
+
+p {
+    line-height: 1.2;
+    color: 164B60;
+}
+
+.paragrafo-de-artigo {
+    background: var(--cor-primaria);
+    padding: 20px 20px 10px 20px;
+    color: var(--cor-terciaria);
+    text-align: center;   
+}
+article p:first-of-type {                    /*.paragrafo-de-artigo:only of type border-radius: 20px 0 20px 0;*/
+        border-radius: 20px 20px 0 0;       /*.paragrafo-de-artigo:last of type    "     "     0    0 20px 0;*/
+                                            /*.paragrafo-de-artigo: :first-of-type "     "     20px 0  0   0;*/
+}
+    p:last-of-type {
+        border-radius: 0px 0 20px 20px;
+    }
+
+
+    p ~ .paragrafo-de-artigo {              
+    padding-top: 0;
+}
+/*estilo dos artigo*/
+
+section#artigo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+.menu-principal ul {
+   
+    list-style-type:circle;
+   display: flex;
+   justify-content: flex-end;
+   flex-direction: row;
+   align-items: center;
+}
+nav.menu-principal {
+    height: 40px;
+    background-color:var(--cor-secundaria);
+}
+
+.menu-principal li {
+    color: var(--cor-fundo);
+    line-height: 50px;
+   display: flex;
+   transition: all .35s;
+}
+
+.menu-principal a {
+    color: var(--cor-fundo);
+    font-family: var(--fonte-secundario);
+    font-size: 120%;
+    padding: 0 10px;
+}
+.menu-principal li:hover {
+    background-color: var(--cor-quaternaria);
+}
